@@ -1,0 +1,22 @@
+largest = None
+smallest = None
+while True:
+    num = input("Enter a number: ")
+    if num == "done" : break
+    
+    try:
+        numi = int(num)
+    except:
+        print("Invalid input")
+        continue
+        
+    if largest is None:
+        largest = numi
+        smallest = numi
+    elif largest < numi:
+        largest = numi
+    elif smallest > numi:
+        smallest = numi
+            
+print("Maximum is", largest)
+print("Minimum is", smallest)
